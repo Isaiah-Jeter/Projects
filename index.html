@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Beggining</title>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container has-text-centered"><h1>Teach Encryption</h1></div>
+<div class="tabs is-small">
+  <ul>
+    <li class="is-active"><li><a id="home">Home</a></li>
+    <a id="why">Why We Use Encryption</a> 
+    </li>
+    <li><a id="CC">Caesar Cypher</a></li>
+    <li><a id="rsa">RSA</a></li>
+  
+  </ul>
+</div>
+
+
+<section id="rsarsa" class= "section is-hidden">
+    <div class="container content">
+      <h1 class="title">RSA</h1>
+      <p class="subtitle">
+        RSA (Rivest-Shamir-Adleman) is an algorithm for encrypting and decrypting messages. It uses Public Key cryptography in which the public key is shared, and the private key, which allows for decryption, is kept secret. The algorithm is based on the difficulty of factoring large numbers. 
+        
+        For generating the key pair, the private and public keys, 2 prime numbers are needed. Please enter any two primes, p and q, below. 
+      </p>
+      <input id="q" type="number" class="input">//ij
+      <input id="p" type="number" class="input">
+      <p class="subtitle">
+        Let n be equal to the product of the two primes
+      </p>
+      <p>
+        <input id="Calculatepq" type="button" value="Calculate" onclick="pq();" />
+      </p>
+      <p id="message"></p>
+      <p class="subtitle">
+        Next we need to evaluate phi(n), Euler's Totient Function. This function counts the number of whole numbers less than n that are relitively prime to n. For any prime number x, phi(x) is just x-1. For complicated math reasons, phi(n) = phi(p)*phi(q) = (p-1)(q-1). 
+      </p>
+              <input id="Calculatephin" type="button" value="Calculate" onclick="phi();" />
+      <p>
+        <p id="phi"></p>
+      </p>
+      <p class="subtitle">
+        Choose a number e which is coprime to phi(n). E must be coprime with phi(n) to prevent easy decryption.
+      </p>
+      <input id="e" type="number" class="input">
+      <input id="checke" type="button" value="Calculate" onclick="checke();" />
+      <p id="coprime"></p>
+      <p class="subtitle">
+        Next we need to find d, the multiplicative inverse of e modulo n. For this we need to use Modular Arithmetic. Modular Arithmetic works like a clock where after a certain point, the values loop around. For example 4 mod 3 would be equal to 1. In mod 4, 1 --> 1, 2 --> 2, 3 --> 0, 4 --> 1. Try this yourself. Input the number to be modded. 
+      </p>
+      <input id="modinput" type="number" class="input">
+      <p class="subtitle">
+        Input the mod to use
+      </p>
+      <input id="modmod" type="number" class="input">
+      <p>
+        <input id="modbutton" type="button" value="Calculate" onclick="mod();" />
+      </p>
+      <p id="modreturn"></p>
+      <p class="subtitle">
+        Back to finding d. Because d is the multiplicative inverse of e modulo n, d*e mod n = 1. D can be computed by using the Extended Euclidian Algorithm. 
+      </p>
+      <input id="Calculated" type="button" value="Calculate" onclick="evald();" />
+      <p>
+      <p id="dreturn"></p>
+      </p>
+      <p class="subtitle">
+        Input the plaintext to be encrypted in numerical form
+      </p>
+      <input id="plaintext" type="number" class="input">
+      <input id="encrypt" type="button" value="Encrypt" onclick="encryptall();" />
+      <p class="subtitle">
+        The numbers are first split up into chunks that are encrypted.
+      </p>
+      <p>
+      <p id="chunked"></p>
+      <p class="subtitle">
+        This is what the encrypted chunks look like. 
+      </p>
+      <p id="cipherout"></p>
+      </p>
+      <p class="subtitle">
+        Input the cipher to be decrypted
+      </p>
+      <input id="Decrypt" type="button" value="Decrypt" onclick="decrypt();" />
+      <p class="subtitle">
+        The numbers are decrypted by taking the cipher text to the power d and modding by n.
+      </p>
+      <p >
+        <p id="decrypted"></p>
+      </p>
+      <p class="subtitle">
+        Lastly the chuncked numbers can be converted back to numerical plaintext.
+      </p>
+      <p id="decryptedplaintext"></p>
+    </div>
+  </section>
+
+
+
+<section id="Cypher" class= "section is-hidden">
+    <div class="container content">
+      <h1 class="title has-text-centered">Caesar Cypher</h1>
+      <div class="container content">
+        <h1 class="text"</h1>
+      <p class="subtitle">
+        The Caesar Cypher is an elementary type of encryption. This encryption revolves around a process where each character of the original message is shifted over by n characters. For example, if the inputted text is bat and the shift is 1 letter, the encrypted text would be cbu, b→ c, a→ b, t→ u. 
+      </p>
+     <p class="subtitle">
+        Type the message you want to Encrypt:
+      </p>
+      <input id= "package" type="text" class="input">
+      <p class="subtitle">
+        Type the number of letters you want to shift by:
+      </p>
+      <input id= "key" type="number" class="input">
+      <input  id="shiftKey" type="button" value="shiftKey"  onclick="shift(package.value,key.value);" />
+      </p>
+        <p id="shiftReturn"></p>
+    </div>
+  </section> 
+
+<section id="WWUE" class= "section is-hidden">
+    <div class="container content">
+       <h1 class="title has-text-centered">Why We Use Encryption</h1>
+      <div class="container content">
+        <h1 class="text"</h1>
+      <p class="subtitle">
+        If you have ever entered any personal information on the internet usually assures that your info is secure. The way websites keep your data safe is through encryption. Encryption is the act of data being changed into a form inaccessible to anyone else but the entity that encrypted your data. A simple example of this would be pig Latin. As a child, you and your friends might’ve learned the “language” pig Latin. When using piglatin you know the original thing you want to say but by altering certain syllables you make your message unrecognizable to anyone who does not know pig Latin. Although very basic, this is exactly what encryption is. Encryption allows data to be hidden under a disguise where only a targeted audience has the raw data. The main hindrance in this form of encrypted communication is if someone you don’t want knowing your message knows piglatin than they still know your message despite your efforts. This solution to this problem comes through a term called entropy.
+
+  </p>
+        <h1 class="title has-text-centered">What is Entropy?</h1>
+        <p class="subtitle">Entropy is the measure of unpredictability associated with a random variable. The reason you want your encrypted data to be as Entropic as possible is that the more entropic it is the harder it would be for a hacker to get your data. The two encryption methods that will teach you to have varying levels of Entropy. We recommend that you start with Ceaser Cypher, which is less complicated, then move on to RSA(Rivest-Shamir-Adleman), which is more complicated. 
+</p>
+        <div id= "a">
+          <img src="https://cdn.discordapp.com/attachments/358472432459317248/642689101757415424/acastro_170629_1777_0008_v2.png" alt="lock"  width="600eight="400 border="0">
+  </div>
+        </div>
+  </section> 
+<section id="homeweb" class= "section is-hidden">
+    <div class="container content">
+       <h1 class="title has-text-centered">Home</h1>
+      <div class="container content">
+        <h1 class="text" </h1>
+      <p class="subtitle">
+        Message from the Creators: “When I first heard the word Encryption I immediately thought, “AHHHH big scary hacker stuff”. But actually, Encryption is not something to be scared of but something anybody who uses the internet should be aware of. This website will teach you the importance of encryption and how some of the most popular encryption methods work. 
+        </p>
+      <div id="b">  <img src=https://cdn.discordapp.com/attachments/358472432459317248/642690543977234459/SecHero.png alt="Key" width="600" height="400" border="0" align="middle">
+  </div>
+  </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.2.2/math.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
