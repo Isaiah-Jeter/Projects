@@ -140,17 +140,4 @@ public class CookieMonster {
          this.mostCookies = mostCookiesSoFar;
          return maxStackSize;
     }
-
-    /* Calculate the route which grants the most cookies, and return the maximum priority queue size during the operation. */
-    /* From any given position, always check right before checking down */
-    /* Set this.mostCookies before returning */
-    /*public int maxPriorityQueueSize() {
-        HeapPQ<PathMarker> priorityQueue = new HeapPQ<PathMarker>();
-        int maxPriorityQueueSize = 0;
-        int mostCookiesSoFar = -1;
-        priorityQueue.add(new PathMarker(0, 0, cookieGrid[0][0]));
-
-        /* -- YOU IMPLEMENT THIS -- */
-    //}
-
 }
