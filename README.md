@@ -9,3 +9,4 @@ Hi! I am A Freshman at Harvey Mudd College who is deciding between majoring in C
 
 ### How to contact me:
 - My Linkedin: [![Linkedin Badge](https://img.shields.io/badge/-kakbar-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/isaiah-jeter-abb947176/)
+- My email: ijeter@g.hmc.edu
