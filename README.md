@@ -1,5 +1,5 @@
-# Projects
----
+# Overview
+
 ### About Me :
 Hi! I am A Freshman at Harvey Mudd College who is deciding between majoring in Computer Science or Engineering.
 
