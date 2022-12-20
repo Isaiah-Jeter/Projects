@@ -4,6 +4,6 @@ This is a program writtien in Racket that given a total and a list of coins avai
 
 ### Notes
 
-This program gave me experience with recursion in Racket
+- This program gave me experience with recursion in Racket
 
 
