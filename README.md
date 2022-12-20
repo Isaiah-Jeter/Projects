@@ -3,8 +3,8 @@
 ### About Me :
 Hi! I am A Freshman at Harvey Mudd College who is deciding between majoring in Computer Science or Engineering.
 
-### About my Projects:
-- These Are a combination of projects I've workd on in School, by myself, and with friends.
+### About my projects:
+- These are a combination of projects I've worked on in School, by myself, and with friends.
 - Feel free to look around and see if there's anything that piques your interest!
 
 ### How to contact me:
