@@ -1,0 +1,11 @@
+body {
+  background: #ec8585;
+  background: linear-gradient(270deg, #ec8585 0%, #e88f94 50%, white 100%);
+  font-family: courier new;
+}
+body #a {
+  margin-left: 350px;
+}
+body #b {
+  margin-left: 350px;
+}
